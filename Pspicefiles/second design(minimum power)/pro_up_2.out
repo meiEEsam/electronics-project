@@ -1,0 +1,154 @@
+
+**** 03/27/22 23:46:44 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-pro_up_2"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-PSpiceFiles\SCHEMATIC2\pro_up_2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pro_up_2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../project1_elec2-pspicefiles/project1_elec2.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Meisam\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.008 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source PROJECT1_ELEC2
+Q_Q1         N19675 N20137 N20229 Qbreakn 
+Q_Q12         N20157 N20619 N20781 Qbreakn 
+Q_Q13         N199471 N19931 N20327 Qbreakn 
+Q_Q18         N20327 N20619 N20781 Qbreakn 
+R_R2         N20133 N19709  160k TC=0,0 
+Q_Q2         N20133 N20147 N20229 Qbreakn 
+R_R5         N19831 N19709  150k TC=0,0 
+R_R3         N20619 N19709  93k TC=0,0 
+V_V3         N20147 0  AC 1
++SIN -3.2 3u 500 0 0 0
+V_V4         N20137 0  AC 1
++SIN -3.2 -3u 500 0 0 0
+R_R7         N199471 N19709  77k TC=0,0 
+Q_Q8         N19831 N20133 N20157 Qbreakn 
+Q_Q6         N20619 N20619 N20781 Qbreakn 
+V_V2         N20781 0 -5
+V_V1         N19709 0 5
+R_R4         N19931 N19709  150k TC=0,0 
+R_R1         N19675 N19709  160k TC=0,0 
+Q_Q4         N20229 N20619 N20781 Qbreakn 
+Q_Q14         N199671 N19831 N20327 Qbreakn 
+R_R8         N199671 N19709  77k TC=0,0 
+Q_Q7         N19931 N19675 N20157 Qbreakn 
+
+**** RESUMING pro_up_2.cir ****
+.END
+
+**** 03/27/22 23:46:44 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-pro_up_2"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-PSpiceFiles\SCHEMATIC2\pro_up_2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Qbreakn         
+               NPN             
+       LEVEL    1            
+          IS  173.000000E-18 
+          BF  100            
+          NF    1            
+         VAF  100            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/27/22 23:46:44 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-pro_up_2"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-PSpiceFiles\SCHEMATIC2\pro_up_2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N19675)   -2.7254 (N19709)    5.0000 (N19831)   -2.2746 (N19931)   -2.2746     
+
+(N20133)   -2.7254 (N20137)   -3.2000 (N20147)   -3.2000 (N20157)   -3.4068     
+
+(N20229)   -3.8813 (N20327)   -2.9553 (N20619)   -4.3005 (N20781)   -5.0000     
+
+(N199471)    1.2839                   (N199671)    1.2839                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -4.758E-07
+    V_V4        -4.758E-07
+    V_V2         3.910E-04
+    V_V1        -3.901E-04
+
+    TOTAL POWER DISSIPATION   3.90E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/27/22 23:46:44 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-pro_up_2"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-PSpiceFiles\SCHEMATIC2\pro_up_2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .91
+

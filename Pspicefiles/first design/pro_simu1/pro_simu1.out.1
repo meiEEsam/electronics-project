@@ -1,0 +1,174 @@
+
+**** 03/26/22 07:09:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pro_simu1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../project1_elec2-pspicefiles/project1_elec2.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Meisam\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.012 0 3u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\project.net" 
+
+
+
+**** INCLUDING project.net ****
+* source PROJECT1_ELEC2
+R_R9         N26096 N25636  86k TC=0,0 
+V_V4         N26292 0  AC 1
++SIN -3.3 -2u 500 0 0 0
+Q_Q16         N26278 N26096 N26612 Qbreakn 
+V_V2         N25932 0 -5
+Q_Q15         N26096 N26096 N26608 Qbreakn 
+Q_Q1         N25716 N26292 N26154 Qbreakn 
+Q_Q10         N26082 N25942 N26492 Qbreakn 
+Q_Q6         N26554 N26554 N25932 Qbreakn 
+Q_Q5         N26064 N26064 N26554 Qbreakn 
+R_R2         N25932 N25636  160k TC=0,0 
+Q_Q13         N258541 N25838 N26278 Qbreakn 
+Q_Q17         N26608 N26608 N25932 Qbreakn 
+Q_Q9         N25942 N25942 N26498 Qbreakn 
+R_R1         N25716 N25636  160k TC=0,0 
+R_R7         N258541 N25636  77k TC=0,0 
+R_R5         N25774 N25636  150k TC=0,0 
+Q_Q3         N26154 N26064 N26558 Qbreakn 
+Q_Q11         N26498 N26498 N25932 Qbreakn 
+R_R3         N26064 N25636  86k TC=0,0 
+Q_Q4         N26558 N26554 N25932 Qbreakn 
+Q_Q14         N258761 N25774 N26278 Qbreakn 
+V_V1         N25636 0 5
+Q_Q2         N25932 N26054 N26154 Qbreakn 
+R_R6         N25942 N25636  86k TC=0,0 
+Q_Q7         N25838 N25716 N26082 Qbreakn 
+Q_Q12         N26492 N26498 N25932 Qbreakn 
+R_R4         N25838 N25636  150k TC=0,0 
+V_V3         N26054 0  AC 1
++SIN -3.3 2u 500 0 0 0
+R_R8         N258761 N25636  77k TC=0,0 
+Q_Q8         N25774 N25932 N26082 Qbreakn 
+Q_Q18         N26612 N26608 N25932 Qbreakn 
+
+**** RESUMING pro_simu1.cir ****
+.END
+
+**** 03/26/22 07:09:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Qbreakn         
+               NPN             
+       LEVEL    1            
+          IS  173.000000E-18 
+          BF  100            
+          NF    1            
+         VAF  100            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+Starting pseudo-transient algorithm.
+
+ERROR(ORPSIM-16550): Floating point computation failed during matrix solution. Possible solutions: 1)Ensure that all device parameters are in valid range. 2)Try using .options LIMIT
+
+INTERNAL ERROR -- Divide by Zero, Divide
+
+ABORTING SIMULATION
+**** 03/26/22 07:09:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =          22
+  External (NCNODS)                 =          22
+  Total (NUMNOD)                    =          22
+
+Total device count (NUMEL)          =          31
+  BJTs (Q)                          =          18
+  Resistors (R)                     =           9
+  Voltage Sources (V)               =           4
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          26
+  Initial no. elements (NTTAR)      =         125
+  No. elements w/ fillin (NTTBR)    =         129
+  No. fillins (IFILL)               =           4
+  No. overflows (NTTOV)             =         403
+  No. LU operations (IOPS)          =         467
+  Percent sparsity (PERSPA)         =      80.917
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =        2310
+  No. rejected time points (NUMRTP) =         144
+  No. iterations (NUMNIT)           =        8389
+
+Load Threads                        =           3
+
+Runtime statistics:                       Seconds      Iterations   Stopped At
+  Matrix load                       =         .33
+  Matrix solution                   =         .02              17
+  Readin                            =        0.00
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  Default algorithm                 =        -.02           -1050
+  GMIN stepping                     =         .02            1050     100.00m
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .30
+  Total job time (using Solver 1)   =         .38
+

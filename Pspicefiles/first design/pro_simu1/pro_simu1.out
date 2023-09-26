@@ -1,0 +1,168 @@
+
+**** 03/26/22 23:58:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pro_simu1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../project1_elec2-pspicefiles/project1_elec2.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Meisam\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.012 0 3u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\project.net" 
+
+
+
+**** INCLUDING project.net ****
+* source PROJECT1_ELEC2
+R_R9         N26096 N25636  86k TC=0,0 
+V_V4         N26292 0  AC 1
++SIN -3.3 -3u 500 0 0 0
+Q_Q16         N26278 N26096 N26612 Qbreakn 
+V_V2         N26744 0 -5
+Q_Q15         N26096 N26096 N26608 Qbreakn 
+Q_Q1         N25716 N26292 N26154 Qbreakn 
+Q_Q10         N26082 N25942 N26492 Qbreakn 
+Q_Q6         N26554 N26554 N26744 Qbreakn 
+Q_Q5         N26064 N26064 N26554 Qbreakn 
+R_R2         N25932 N25636  160k TC=0,0 
+Q_Q13         N258541 N25838 N26278 Qbreakn 
+Q_Q17         N26608 N26608 N26744 Qbreakn 
+Q_Q9         N25942 N25942 N26498 Qbreakn 
+R_R1         N25716 N25636  160k TC=0,0 
+R_R7         N258541 N25636  77k TC=0,0 
+R_R5         N25774 N25636  150k TC=0,0 
+Q_Q3         N26154 N26064 N26558 Qbreakn 
+Q_Q11         N26498 N26498 N26744 Qbreakn 
+R_R3         N26064 N25636  86k TC=0,0 
+Q_Q4         N26558 N26554 N26744 Qbreakn 
+Q_Q14         N258761 N25774 N26278 Qbreakn 
+V_V1         N25636 0 5
+Q_Q2         N25932 N26054 N26154 Qbreakn 
+R_R6         N25942 N25636  86k TC=0,0 
+Q_Q7         N25838 N25716 N26082 Qbreakn 
+Q_Q12         N26492 N26498 N26744 Qbreakn 
+R_R4         N25838 N25636  150k TC=0,0 
+V_V3         N26054 0  AC 1
++SIN -3.3 3u 500 0 0 0
+R_R8         N258761 N25636  77k TC=0,0 
+Q_Q8         N25774 N25932 N26082 Qbreakn 
+Q_Q18         N26612 N26608 N26744 Qbreakn 
+
+**** RESUMING pro_simu1.cir ****
+.END
+
+**** 03/26/22 23:58:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Qbreakn         
+               NPN             
+       LEVEL    1            
+          IS  173.000000E-18 
+          BF  100            
+          NF    1            
+         VAF  100            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/26/22 23:58:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N25636)    5.0000 (N25716)   -2.6906 (N25774)   -2.2087 (N25838)   -2.2087     
+
+(N25932)   -2.6906 (N25942)   -3.6003 (N26054)   -3.3000 (N26064)   -3.6003     
+
+(N26082)   -3.3718 (N26096)   -3.6003 (N26154)   -3.9811 (N26278)   -2.8891     
+
+(N26292)   -3.3000 (N26492)   -4.2997 (N26498)   -4.3003 (N26554)   -4.3003     
+
+(N26558)   -4.2999 (N26608)   -4.3003 (N26612)   -4.2996 (N26744)   -5.0000     
+
+(N258541)    1.3335                   (N258761)    1.3335                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4        -4.730E-07
+    V_V2         5.884E-04
+    V_V1        -5.875E-04
+    V_V3        -4.730E-07
+
+    TOTAL POWER DISSIPATION   5.88E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/26/22 23:58:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "project-pro_simu1"  [ c:\users\meisam\appdata\roaming\spb_data\project1_elec2-pspicefiles\project\pro_simu1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .50
+
